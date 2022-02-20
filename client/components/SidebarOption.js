@@ -3,12 +3,12 @@ const style = {
   wrapper: `m-min flex`
 }
 
-function SidebarOption({ text, Icon, isActive, setSlected, redirect }) {
+function SidebarOption({ text, Icon, isActive, setSelected, redirect }) {
   return (
     <div
       className={style.wrapper}
       onClick={() => {
-        setSlected(text)
+        setSelected(text)
       }}
     >
       <div className={style.iconContainer}>

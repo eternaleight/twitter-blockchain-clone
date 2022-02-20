@@ -1,5 +1,13 @@
+import { useState } from 'react'
 import { FiMoreHorizontal } from 'react-icons/fi'
 import { VscTwitter } from 'react-icons/vsc'
+import SidebarOption from './SidebarOption'
+import { RiHome7Line, RiHome7Fill, RiFillList2Fill } from 'react-icons/ri'
+import { BiHash } from 'react-icons/bi'
+import { FiBell } from 'react-icons/fi'
+import { HiOutlineMail, HiMail } from 'react-icons/hi'
+import { FaRegListAlt, FaHashtag, FaBell } from 'react-icons/fa'
+import { CgMoreO } from 'react-icons/cg'
 
 
 
@@ -20,14 +28,22 @@ const style = {
 }
 
 
-function Sidebar() {
+function Sidebar({ initialSelectedIcon = 'Home' }) {
+  const [selected, setSlected] = useState(initialSelectedIcon)
+
   return (
     <div className={style.wrapper}>
       <div className={style.twitterIconContainer}>
         <VscTwitter />
       </div>
       <div className={style.navContainer}>
-        <div>Home</div>
+        <SidebarOption
+          Icon={selected === 'Home' ? RiHome7Fill : RiHome7Line}
+          text='Home'
+          isActive={Boolean(selected === 'Home')}
+          setSlected={setSlected}
+          redirect={'/'}
+        />
         <div>Explore</div>
         <div>Notifications</div>
         <div>Messages</div>
@@ -36,6 +52,18 @@ function Sidebar() {
         <div>Profile</div>
         <div>More</div>
         <div className={style.tweetButton}>Mint</div>
+        <div className={style.profileButton}>
+          <div className={style.profileLeft}></div>
+          <div className={style.profileRight}>
+            <div className={style.details}>
+              <div className={style.name}>eternaleight</div>
+              <div className={style.handle}>@0x22df ... 5xf2df</div>
+            </div>
+            <div className={style.moreContainer}>
+              <FiMoreHorizontal />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )

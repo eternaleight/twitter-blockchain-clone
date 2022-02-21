@@ -18,7 +18,7 @@ import {
 
 
 const style = {
-  wrapper: `flex-[0.7] px-8 flex flex-col` ,
+  wrapper: `flex-[0.7] px-8 flex flex-col`,
   twitterIconContainer: `text-3xl m-4`,
   tweetButton: `bg-[#1d9bf0] hover:bg-[#1b8cd8] flex items-center justify-center font-bold rounded-3xl h-[50px] mt-[20px] cursor-pointer`,
   navContainer: `flex-1`,
@@ -86,7 +86,7 @@ function Sidebar({ initialSelectedIcon = 'Home' }) {
           setSelected={setSelected}
           redirect={'/profile'}
         />
-        <SidebarOption Icon={CgMoreO} text='More' setSelected={setSelected}/>
+        <SidebarOption Icon={CgMoreO} text='More' setSelected={setSelected} />
         <div className={style.tweetButton}>
           Mint
         </div>

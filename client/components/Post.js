@@ -1,7 +1,5 @@
-
-
-
-
+import { BsFillPatchCheckFill } from "react-icons/bs"
+import { format } from 'timeago.js'
 
 const style = {
   wrapper: `flex p-3 border-b border-[#38444d]`,
@@ -20,8 +18,8 @@ const style = {
 const Post = ({
   displayName,
   userName,
-  avatar,
   text,
+  avatar,
   timestamp,
   isProfileImageNft,
 }) => {
@@ -33,13 +31,27 @@ const Post = ({
           src={avatar}
           alt={userName}
           className={
-            true
+            isProfileImageNft
               ? `${style.profileImage} smallHex`
               : style.profileImage
           }
         />
       </div>
-    </div>
+      <div className={style.postMain}>
+        <div>
+          <span className={style.headerDetails}>
+            <span className={style.name}>{displayName}</span>{isProfileImageNft && (
+              <span className={style.verified}>
+                <BsFillPatchCheckFill />
+              </span>
+            )}
+          </span>
+          <span className={style.handleAndTimeAgo}>
+            @{userName} • {format(new Date(timestamp).getTime())}
+          </span>
+        </div>
+      </div>
+    </div >
   )
 }
 

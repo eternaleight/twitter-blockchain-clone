@@ -9,38 +9,38 @@ const style = {
   headerTitle: `text-xl font-bold`,
 }
 
-const tweets = [
+const tweet = [
   {
-    displayName: 'Qazi',
+    displayName: 'eternaleight@',
     userName: '0x7165662174c8b2A4e97d6321bb8caeBb3179940C',
     avater: 'https://avatars.githubusercontent.com/u/96198088?v=4',
     text: 'gm',
     isProfileImageNft: false,
-    timestamp: '2020-06-01T12:00:00.0002',
+    timestamp: '2020-06-01T12:00:000Z',
   },
   {
-    displayName: 'Qazi',
+    displayName: 'eternaleight@',
     userName: '0x7165662174c8b2A4e97d6321bb8caeBb3179940C',
     avater: 'https://avatars.githubusercontent.com/u/96198088?v=4',
     text: 'gm',
     isProfileImageNft: false,
-    timestamp: '2020-06-01T12:00:00.0002',
+    timestamp: '2021-06-01T12:00:000Z',
   },
   {
-    displayName: 'Qazi',
+    displayName: 'eternaleight@',
     userName: '0x7165662174c8b2A4e97d6321bb8caeBb3179940C',
     avater: 'https://avatars.githubusercontent.com/u/96198088?v=4',
     text: 'gm',
     isProfileImageNft: false,
-    timestamp: '2020-06-01T12:00:00.0002',
+    timestamp: '2022-06-01T12:00:000Z',
   },
   {
-    displayName: 'Qazi',
+    displayName: 'eternaleight@',
     userName: '0x7165662174c8b2A4e97d6321bb8caeBb3179940C',
     avater: 'https://avatars.githubusercontent.com/u/96198088?v=4',
     text: 'gm',
     isProfileImageNft: false,
-    timestamp: '2020-06-01T12:00:00.0002',
+    timestamp: '2020-06-01T12:00:000Z',
   },
 ]
 
@@ -52,15 +52,15 @@ function Feed() {
         <BsStars />
       </div>
       <TweetBox />
-      {tweets.map((tweets, index) => (
+      {tweet.map((tweet, index) => (
         <Post
           key={index}
-          displayName={tweets.displayName}
-          userName={tweets.userName}
-          avatar={tweets.avater}
-          text={tweets.text}
-          isProfileImageNft={tweets.isProfileImageNft}
-          timestamp={tweets.avater}
+          displayName={tweet.displayName}
+          userName={tweet.userName}
+          avatar={tweet.avater}
+          text={tweet.text}
+          isProfileImageNft={tweet.isProfileImageNft}
+          timestamp={tweet.timestamp}
         />
       ))}
     </div>

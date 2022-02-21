@@ -16,7 +16,7 @@ const tweet = [
     avater: 'https://avatars.githubusercontent.com/u/96198088?v=4',
     text: 'gm',
     isProfileImageNft: false,
-    timestamp: '2020-06-01T12:00:000Z',
+    timestamp: '2022-02-21T12:00:00.000Z',
   },
   {
     displayName: 'eternaleight@',
@@ -24,7 +24,7 @@ const tweet = [
     avater: 'https://avatars.githubusercontent.com/u/96198088?v=4',
     text: 'gm',
     isProfileImageNft: false,
-    timestamp: '2021-06-01T12:00:000Z',
+    timestamp: '2021-12-01T12:00:00.000Z',
   },
   {
     displayName: 'eternaleight@',
@@ -32,7 +32,7 @@ const tweet = [
     avater: 'https://avatars.githubusercontent.com/u/96198088?v=4',
     text: 'gm',
     isProfileImageNft: false,
-    timestamp: '2022-06-01T12:00:000Z',
+    timestamp: '2021-11-01T12:00:00.000Z',
   },
   {
     displayName: 'eternaleight@',
@@ -40,7 +40,7 @@ const tweet = [
     avater: 'https://avatars.githubusercontent.com/u/96198088?v=4',
     text: 'gm',
     isProfileImageNft: false,
-    timestamp: '2020-06-01T12:00:000Z',
+    timestamp: '2020-09-01T12:00:00.000Z',
   },
 ]
 
@@ -55,8 +55,8 @@ function Feed() {
       {tweet.map((tweet, index) => (
         <Post
           key={index}
-          displayName={tweet.displayName}
-          userName={tweet.userName}
+          displayName={tweet.displayName.slice}
+          userName={`${tweet.userName.slice(0, 4)}...${tweet.userName-4}`}
           avatar={tweet.avater}
           text={tweet.text}
           isProfileImageNft={tweet.isProfileImageNft}

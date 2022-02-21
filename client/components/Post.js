@@ -1,4 +1,8 @@
 
+
+
+
+
 const style = {
   wrapper: `flex p-3 border-b border-[#38444d]`,
   profileImage: `rounded-full h-[40px] w-[40px] object-cover`,
@@ -14,10 +18,9 @@ const style = {
 }
 
 const Post = ({
-  key,
   displayName,
   userName,
-  avater,
+  avatar,
   text,
   timestamp,
   isProfileImageNft,
@@ -27,12 +30,14 @@ const Post = ({
     <div className={style.wrapper}>
       <div>
         <img
-          src={avater}
+          src={avatar}
           alt={userName}
           className={
-            isProfileImageNft
+            true
               ? `${style.profileImage} smallHex`
-              : style.profileImage} />
+              : style.profileImage
+          }
+        />
       </div>
     </div>
   )

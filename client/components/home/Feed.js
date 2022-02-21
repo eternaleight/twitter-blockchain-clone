@@ -57,7 +57,7 @@ function Feed() {
           key={index}
           displayName={tweets.displayName}
           userName={tweets.userName}
-          avater={tweets.avater}
+          avatar={tweets.avater}
           text={tweets.text}
           isProfileImageNft={tweets.isProfileImageNft}
           timestamp={tweets.avater}

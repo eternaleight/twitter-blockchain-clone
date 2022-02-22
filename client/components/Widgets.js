@@ -1,7 +1,6 @@
 import { news, whoToFollow } from '../lib/static'
 import { BiSearch } from 'react-icons/bi'
 
-
 const style = {
   wrapper: `flex-[1] p-4`,
   searchBar: `flex items-center bg-[#243340] p-2 rounded-3xl`,
@@ -24,10 +23,35 @@ const style = {
   followButton: `bg-white text-black px-3 py-1 rounded-full text-xs font-bold`,
 }
 
-
 const Widgets = () => {
   return (
-    <div>Widgets</div>
+    <div className={style.wrapper}>
+      <div className={style.searchBar}>
+        <BiSearch className={style.searchIcon} />
+        <input
+          type="text"
+          placeholder='Search Twitter'
+          className={style.inputBox}
+        />
+      </div>
+      <div className={style.section}>
+        <div className={style.title}>What's happening?</div>
+        {news.map((item, index) => (
+          <div key={index} className={style.item}>
+            <div className={style.newsItemLeft}>
+              <div className={style.newsItemCategory}>{item.category}</div>
+              <div className={style.newsItemTitle}>{item.title}</div>
+            </div>
+            <div className={style.newsItemRight}>
+              <img
+                src={item.image}
+                alt={item.category}
+                className={style.newsItemImage} />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   )
 }
 

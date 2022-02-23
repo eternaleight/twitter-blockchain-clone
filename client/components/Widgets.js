@@ -51,6 +51,7 @@ const Widgets = () => {
           </div>
         ))}
         <div className={style.showMore}>Show more</div>
+      </div>
         <div className={style.section}>
           <div className={style.title}>Who to follow</div>
           {whoToFollow.map((item) => (
@@ -61,14 +62,15 @@ const Widgets = () => {
                   alt={item.handle}
                   className={style.followAvatar} />
               </div>
-              <div className={style.name}>{item.name}</div>
-              <div className={style.handle}></div>
+              <div className={style.profileDetails}>
+                <div className={style.name}>{item.name}</div>
+                <div className={style.handle}></div>
+              </div>
               <div className={style.followButton}>Follow</div>
             </div>
           ))}
         </div>
       </div>
-    </div>
   )
 }
 

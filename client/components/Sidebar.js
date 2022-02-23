@@ -14,6 +14,7 @@ import {
   BsPerson,
   BsPersonFill,
 } from 'react-icons/bs'
+import Link from 'next/link'
 
 
 
@@ -78,6 +79,7 @@ function Sidebar({ initialSelectedIcon = 'Home' }) {
           text='Lists'
           isActive={Boolean(selected === 'Lists')}
           setSelected={setSelected}
+          redirect={'/list'}
         />
         <SidebarOption
           Icon={selected === 'Profile' ? BsPersonFill : BsPerson}

@@ -32,10 +32,10 @@ export const news = [
 export const whoToFollow = [
   {
     id:'0',
-    name: 'Rafeh Qazi',
+    name: 'Next.js',
     handle: '@cleverqazi',
     avatar:
-      'https://pbs.twimg.com/profile_images/1472075657920221184/JhAI3WGm_400x400.jpg',
+      'https://pbs.twimg.com/profile_images/1468045715083509767/JrehsCpb_400x400.png',
   },
   {
     id:'1',

@@ -7,7 +7,7 @@ import { FiShare } from "react-icons/fi"
 const style = {
   wrapper: `flex p-3 border-b border-[#38444d]`,
   profileImage: `rounded-full h-[40px] w-[40px] object-cover`,
-  postMain: `flex-1 px-4`,
+  postMain: ` flex-1 px-4`,
   headerDetails: `flex items-center`,
   name: `font-bold mr-1`,
   verified: `text-[0.8rem]`,

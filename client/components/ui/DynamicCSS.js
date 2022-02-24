@@ -35,7 +35,8 @@ export default function DynamicCSS() {
           <Switch
             checked={success}
             onChange={handleChange}
-            color="secondary"
+            color="default"
+            //'primary' | 'secondary' | 'error' | 'info' | 'success' | 'warning' | 'default'
             value="dynamic-class-name"
           />
         }

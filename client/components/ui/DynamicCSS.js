@@ -40,7 +40,7 @@ export default function DynamicCSS() {
             value="dynamic-class-name"
           />
         }
-        label="ｸﾞﾗﾝﾁﾙﾀﾞの家のｴｱｺﾝ"
+        label="ｸﾞﾗﾝﾁﾙﾀﾞん家のｴｱｺﾝ"
       />
       <StyledSlider success={success} defaultValue={30} sx={{ mt: 1 }} />
     </React.Fragment>

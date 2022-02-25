@@ -179,13 +179,17 @@ const AntSwitch = styled(Switch)(({ theme }) => ({
   },
 }));
 
+
+
 export default function CustomizedSwitches() {
   return (
     <FormGroup>
+      <div>
       <FormControlLabel
         control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
         label="MUI switch"
       />
+      </div>
       <FormControlLabel
         control={<Android12Switch defaultChecked />}
         label="Android 12"
